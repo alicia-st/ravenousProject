@@ -1,7 +1,7 @@
-import React from 'react';
-import Business from '../Business/Business.js';
+import React, { StrictMode } from 'react';
+import BusinessList from '../BusinessList/BusinessList.js';
 function App() {
-    return <Business/>
+    return <BusinessList />
 };
 
 export default App;
