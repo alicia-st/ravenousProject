@@ -1,18 +1,8 @@
 import React from 'react';
 import styles from './Business.module.css';
 
-const business = {
-    imageSrc: "https://s3.amazonaws.com/codecademy-content/programs/react/ravenous/pizza.jpg",
-    name: "Papa's Pizzeria",
-    address: 'Strada Campului',
-    city: 'Cluj-Napoca',
-    state: 'Cluj',
-    zipcode: '100321',
-    category: 'Pizzeria',
-    rating: 4,
-    reviewCount: 19,
-};
- function Business(){
+
+ function Business({business}){
      return (
          <div className={styles.Business}>
              <div className={styles.imageContainer}>
