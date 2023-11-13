@@ -1,13 +1,13 @@
 import React, { useState } from "react";
 import styles from "./SearchBar.module.css";
-import  searchBusinesses  from '../../utils/yelpAPI';
+
 const sortByOptions = [
   "Best Match",
   "Highest Rated",
   "Most Reviewed",
 ];
 
-const SearchBar = () => {
+const SearchBar = ({searchBusinesses}) => {
   // Set our initial states
 
   const [searchTerm, setSearchTerm] = useState('');

@@ -2,34 +2,21 @@
 import BusinessList from '../BusinessList/BusinessList.js';
 import SearchBar from '../SearchBar/SearchBar.js';
 import styles from './App.module.css';
-const business1 = {
-    imageSrc: "https://s3.amazonaws.com/codecademy-content/programs/react/ravenous/pizza.jpg",
-    name: "Papa's Pizzeria",
-    address: 'Strada Campului',
-    city: 'Cluj-Napoca',
-    state: 'Cluj',
-    zipcode: '100321',
-    category: 'Pizzeria',
-    rating: 4,
-    reviewCount: 19,
-};
-const business2 = {
-    imageSrc: "https://s3.amazonaws.com/codecademy-content/programs/react/ravenous/pizza.jpg",
-    name: "Furman",
-    address: 'Zvolenská 73',
-    city: 'Vidina',
-    state: 'Lucenec',
-    zipcode: '985 59',
-    category: 'Restaurant',
-    rating: 4,
-    reviewCount: 19,
-};
-const businesses = [business1,business2];
+import searchBusinesses from '../../utils/yelpAPI.js';
+import { useState } from 'react';
+
+
 function App() {
+    const [businesses, setBusinesses] = useState([]);
+    const searchYelp = async (term, location, sortBy) => {
+        const businesses = await searchBusinesses(term, location, sortBy);
+        setBusinesses(businesses);
+    };
+
     return (<div className={styles.App}>
         <h1>ravenous</h1>
-        <SearchBar />
-        {businesses.map(business => (<BusinessList businessObject={business} />))}
+        <SearchBar searchBusinesses={searchYelp} />
+        <BusinessList businesses={businesses} />
     </div>);
 };
 

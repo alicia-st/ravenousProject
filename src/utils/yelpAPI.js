@@ -5,7 +5,7 @@ const yelpUrl = 'https://api.yelp.com/v3/businesses/search';
 const searchBusinesses = async (term, location, sortByOption) => {
     const requestParams = `?term=${term}&location=${location}&sort_by=${sortByOption}&limit=20`;
     const bypassCORS = 'https://cors-anywhere.herokuapp.com/';
-    const urlToFetch = bypassCORS+ yelpUrl + requestParams;
+    const urlToFetch = bypassCORS + yelpUrl + requestParams;
     const optionsAPI = {
         headers: {
             Authorization: `Bearer ${yelpKey}`,
@@ -13,8 +13,25 @@ const searchBusinesses = async (term, location, sortByOption) => {
     };
     try {
         const response = await fetch(urlToFetch, optionsAPI);
-        const responseJson = await response.json();
-        console.log(responseJson);
+        if (response.ok) {
+            const responseJson = await response.json();
+            console.log(responseJson);
+            if (responseJson.businesses) {
+                return responseJson.businesses.map((business) => ({
+                    id: business.id,
+                    imageSrc: business.image_url,
+                    name: business.name,
+                    address: business.location.address1,
+                    city: business.location.city,
+                    state: business.location.state,
+                    zipcode: business.location.zip_code,
+                    category: business.categories[0].title,
+                    rating: business.rating,
+                    reviewCount: business.review_count,
+                }));
+            };
+        };
+        
     } catch (err) {
         console.log(err)
     };

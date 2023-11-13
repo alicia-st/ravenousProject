@@ -2,11 +2,12 @@ import React from "react";
 import styles from './BusinessList.module.css'
 
 import Business from "../Business/Business";
-const BusinessList=({businessObject})=>{
+const BusinessList=({businesses})=>{
     return (
         <div className={styles.BusinessList}>
-            <Business business={businessObject} />
-            <Business business={businessObject} />
+                {businesses.map((business) => {
+                    return <Business business={business} key={business.name} />
+                })}
         </div>
     );
 };

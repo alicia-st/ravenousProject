@@ -4,7 +4,7 @@ import styles from './Business.module.css';
 
  function Business({business}){
      return (
-         <div className={styles.Business}>
+         <div id={business.id} className={styles.Business}>
              <div className={styles.imageContainer}>
                  <img src={business.imageSrc} alt={business.name} />
              </div>
