@@ -1,4 +1,4 @@
-# Restaurant Search App
+# Ravenous
 
 Welcome to the Restaurant Search App, a React-based web application that allows users to search for restaurants using the Yelp API. This project provides a user-friendly interface, real-time restaurant data, and a responsive design for an optimal user experience.
 
@@ -12,7 +12,7 @@ Welcome to the Restaurant Search App, a React-based web application that allows 
 
 1. **Clone the Repository:**
    ```bash
-   git clone https://github.com/your-username/restaurant-search-app.git
+   git clone https://github.com/your-username/ravenousProject.git
    cd restaurant-search-app
    ```
 2. **Install Dependencies:**
