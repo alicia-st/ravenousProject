@@ -24,4 +24,10 @@ Welcome to the Restaurant Search App, a React-based web application that allows 
    npm start
    ```
 4. **Accessing the Demo Server:**
-   
+   - To check the website and interact with the application, you must access the [demo server](https://cors-anywhere.herokuapp.com/corsdemo) to request temporary access. This step is necessary due to CORS restrictions.
+
+## Usage
+
+-Open the application in your web browser.
+-Use the search feature to find restaurants based on your preferences.
+-Explore the details of each restaurant, including ratings, reviews, and more.   
