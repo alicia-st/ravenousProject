@@ -28,6 +28,6 @@ Welcome to the Restaurant Search App, a React-based web application that allows 
 
 ## Usage
 
--Open the application in your web browser.
--Use the search feature to find restaurants based on your preferences.
--Explore the details of each restaurant, including ratings, reviews, and more.   
+- Open the application in your web browser.
+- Use the search feature to find restaurants based on your preferences.
+- Explore the details of each restaurant, including ratings, reviews, and more.   
