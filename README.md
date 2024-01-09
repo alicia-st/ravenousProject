@@ -13,7 +13,7 @@ Welcome to the Restaurant Search App, a React-based web application that allows 
 1. **Clone the Repository:**
    ```bash
    git clone https://github.com/your-username/ravenousProject.git
-   cd restaurant-search-app
+   cd ravenousProject
    ```
 2. **Install Dependencies:**
    ```bash
